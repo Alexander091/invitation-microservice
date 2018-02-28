@@ -1,0 +1,13 @@
+<h1 mat-dialog-title>Привет, {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Какое время ты хочешь выбрать?</p>
+  <mat-form-field>
+    <input matInput [matDatepicker]="picker" [(ngModel)]="data.dateMeeting" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+  <button mat-raised-button [mat-dialog-close]="data.dateMeeting" cdkFocusInitial color="primary">Решено!</button>
+  <button mat-button (click)="onNoClick()">Я ещё подумаю</button>
+</div>

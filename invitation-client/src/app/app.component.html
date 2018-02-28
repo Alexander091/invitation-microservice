@@ -1,0 +1,41 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="main-container">
+  <p>
+    Вы получили новое сообщение
+  </p>
+  <mat-card class="example-card">
+    <mat-card-header>
+      <div mat-card-avatar class="example-header-image"></div>
+      <mat-card-title>Алексеев Александр</mat-card-title>
+      <mat-card-subtitle>IT звяязда</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image src="/assets/img/invite.jpg" >
+    <mat-card-content>
+      <p>
+        Привет, {{name}}!
+      </p>
+      <p>
+        Я приглашаю тебя снова встретиться {{dateMeeting | date:'longDate'}}
+      </p>
+      <p>
+        Всё что нужно, это только нажать на кнопку "Конечно") В теории, тебе должно придти письмо по почте)
+      </p>
+      <form class="example-form">
+        <mat-form-field class="example-full-width">
+          <input matInput placeholder="Email" [formControl]="emailFormControl" [(ngModel)]="email">
+          <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+            Неа... не подходит
+          </mat-error>
+          <mat-error *ngIf="emailFormControl.hasError('required')">
+            Да, поле <strong>обязательное</strong>... но на самом деле нет)
+          </mat-error>
+        </mat-form-field>
+      </form>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="submitForm()">Конечно</button>
+      <button mat-button (click)="openDialog()">Предложить другое время</button>
+    </mat-card-actions>
+  </mat-card>
+</div>
+<ng4-loading-spinner> </ng4-loading-spinner>

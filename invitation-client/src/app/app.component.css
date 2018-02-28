@@ -1,0 +1,17 @@
+.example-card {
+  max-width: 400px;
+}
+
+.example-header-image {
+  background-image: url("/assets/img/ava.jpg");
+  background-size: cover;
+}
+
+.main-container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
