@@ -10,9 +10,9 @@ import java.util.Properties;
 
 @Slf4j
 public class EmailUtils {
-    private static final String from = "noreply.alexander.alekseev091@gmail.com";
-    private static final String me = "alexander.alekseev091@gmail.com";
-    private static final String pass = "1qaz2wsx3edc4rfv";
+    private static final String from = "xxxxx";
+    private static final String me = "xxxxx";
+    private static final String pass = "xxxxxxx";
     private static final String host = "smtp.gmail.com";//or IP address
     private static final String port = "587";//or IP address
     private static final SimpleDateFormat format = new SimpleDateFormat("dd-MM-yyyy");
